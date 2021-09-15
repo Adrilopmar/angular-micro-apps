@@ -1,0 +1,27 @@
+h3{
+    padding: 2vw 0;
+    font-size: 54px;
+    color: #ececec;
+    font-weight: bold;
+}
+nav{
+    background: #ececec;
+}
+ul{
+    margin-left: 50px;
+}
+li{
+    color: #000;
+    list-style: none;
+    width: 100%;
+    padding: 1vw 2vw;
+}
+a{
+    text-decoration: none;
+}
+a:hover {
+    background: #6c757d;
+}
+li:hover{
+    color: #ececec;
+}

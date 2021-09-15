@@ -1,0 +1,36 @@
+<div class="container " id="calendar">
+    <full-calendar [options]="CalendarOptions" class="calendar" ></full-calendar>
+    <div class="adding-event">
+        <div class=" d-flex justify-content-center">
+            <div class="event d-flex text-center">
+                <label for="eventName" >What's happening?</label>
+                <input type="text" name="eventName" #eventName>
+            </div>
+        </div>
+        <div class=" d-flex justify-content-around">
+            <div class="event d-flex text-center">
+                <label for="startDate">when it's starting?</label>
+                <input type="date" #startDate>
+            </div>
+            <div class="event d-flex text-center">
+                <label for="finishDate">when does it finish?</label>
+                <input type="date" #endDate>
+            </div>
+        </div>
+        <div class="justify-content-center d-flex">
+            <button class="btn btn-primary" (click)="addEvent(eventName.value, startDate.value, endDate.value)">Add event</button>
+        </div>
+    </div>
+    <div class="delete-event">
+        <div class=" justify-content-baseline justify-content-around d-flex">
+            <select name="savedEvents" #listEvents>
+                <option *ngFor="let event of calendarEvents">{{event.title}}</option>
+            </select>
+            <button class="btn btn-warning" (click)="deleteTargetEvent(listEvents.value)">Delete event</button>
+        </div>
+    </div>
+        <div class="justify-content-around d-flex del-all-event">
+            <button class="btn btn-danger" (click)="deleteEvents()">Delete all events</button>
+        </div>
+    
+</div>
