@@ -24,13 +24,14 @@
     <div class="delete-event">
         <div class=" justify-content-baseline justify-content-around d-flex">
             <select name="savedEvents" #listEvents>
-                <option *ngFor="let event of calendarEvents">{{event.title}}</option>
+                <option *ngFor="let event of calendarEvents" value="{{event.id}}">{{event.title}}</option>
             </select>
             <button class="btn btn-warning" (click)="deleteTargetEvent(listEvents.value)">Delete event</button>
         </div>
     </div>
         <div class="justify-content-around d-flex del-all-event">
             <button class="btn btn-danger" (click)="deleteEvents()">Delete all events</button>
+            <button class="btn btn-danger" (click)="conse()">Devents</button>
         </div>
     
 </div>
